@@ -26,7 +26,7 @@ article.book {
       display: block;
       text-transform: uppercase;
       font-size: 0.7em;
-      opacity: 0.6;
+      color: $grey;
     }
 
     .big-number {
@@ -42,6 +42,6 @@ article.book {
 
   .excerpt {
     font-size: 0.8em;
-    opacity: 0.6;
+    color: $grey;
   }
 }

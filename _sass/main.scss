@@ -5,7 +5,7 @@ body {
   justify-content: center;
   font-family: "Poppins","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px;
-  color: #484848;
+  color: $black;
   background-color: #f5f5f5;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +37,7 @@ a.no-effects {
 
 .banner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   .banner-content {
