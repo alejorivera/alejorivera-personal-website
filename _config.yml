@@ -17,3 +17,7 @@ title: Alejo Rivera
 description: "Alejo Rivera: Entrepreneur, programmer, traveler, aspiring chess player."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://alejorivera.com" # the base hostname & protocol for your site
+
+collections:
+  my_books:
+    output: true

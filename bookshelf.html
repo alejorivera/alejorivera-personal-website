@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<section>
+  {% include banner.html %}
+
+  <h2>Bookshelf 📚</h2>
+
+  <p>
+    These are some of the books I've read over the last couple of years,
+    complete with a tiny summary and a rating. If you enjoy this list
+    or would like to chat about any of these books, let me know!
+  </p>
+
+  {% assign books = site.my_books | sort: 'rating' %}
+  {% for book in books reversed %}
+
+    <article class="book" data-rating="{{ book.rating }}">
+      <img src="http://images.amazon.com/images/P/{{ book.isbn }}.01.LZZZZZZZ.jpg"
+      alt="cover for {{ book.title }}" class="cover">
+
+      <div class="info">
+        <h2 class="title">{{ book.title }} — by {{ book.author }}</h2>
+        <div class="rating">
+          <span class="rating-text">Rating:</span>
+          <span class="big-number">{{ book.rating }}</span><span class="small-number">/10</span>
+        </div>
+        <p class="excerpt">
+          {{ book.content | strip_html | truncatewords:30}}
+        </p>
+      </div> <!-- end info -->
+    </article>
+
+  {% endfor %}
+</section>
