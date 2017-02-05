@@ -1,0 +1,47 @@
+article.book {
+  display: flex;
+  margin: 6rem 0;
+
+  @media(max-width: 767px) {
+    display: block;
+
+    .cover {
+      display: block;
+    }
+  }
+
+  .cover {
+    max-height: 240px;
+    margin: 0 2rem 1.5rem 0;
+  }
+
+  .title {
+    margin-top: 0;
+    font-size: 1.4rem;
+    line-height: 1.25;
+  }
+
+  .rating {
+    .rating-text {
+      display: block;
+      text-transform: uppercase;
+      font-size: 0.7em;
+      opacity: 0.6;
+    }
+
+    .big-number {
+      font-size: 2.5em;
+      font-weight: 100;
+      line-height: 1.35;
+    }
+
+    .small-number {
+      font-size: 0.7em;
+    }
+  }
+
+  .excerpt {
+    font-size: 0.8em;
+    opacity: 0.6;
+  }
+}
