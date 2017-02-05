@@ -14,10 +14,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Alejo Rivera
-description: Alejo Rivera's personal page.
+description: "Alejo Rivera: Entrepreneur, programmer, traveler, aspiring chess player."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://alejorivera.com" # the base hostname & protocol for your site
-
-# Build settings
-markdown: kramdown
-theme: minima
