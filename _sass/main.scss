@@ -22,10 +22,6 @@ section {
   padding: 3rem;
 }
 
-nav {
-  margin: 0.5rem 0;
-}
-
 p {
   margin: 0 0 1.5rem;
 }
@@ -50,6 +46,11 @@ a.no-effects {
     display: inline-block;
     margin-right: 1rem;
   }
+
+  &.sm {
+    .profile-pic { max-height: 60px; }
+    h1, a { font-size: 1em; }
+  }
 }
 
 .vertical-divider {
@@ -58,4 +59,10 @@ a.no-effects {
   &:after {
     content: "·";
   }
+}
+
+.back-to {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
 }

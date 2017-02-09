@@ -13,24 +13,28 @@ layout: default
     or would like to chat about any of these books, let me know!
   </p>
 
-  {% assign books = site.my_books | sort: 'rating' %}
-  {% for book in books reversed %}
+  <div class="books">
+    {% assign books = site.books | sort: 'rating' %}
+    {% for book in books reversed %}
 
-    <article class="book" data-rating="{{ book.rating }}">
-      <img src="http://images.amazon.com/images/P/{{ book.isbn }}.01.LZZZZZZZ.jpg"
-      alt="cover for {{ book.title }}" class="cover">
+      <article class="book" data-rating="{{ book.rating }}">
+        <img src="http://images.amazon.com/images/P/{{ book.isbn }}.01.LZZZZZZZ.jpg"
+        alt="cover for {{ book.title }}" class="cover">
 
-      <div class="book-info">
-        <h2 class="title">{{ book.title }} — by {{ book.author }}</h2>
-        <div class="rating">
-          <span class="rating-text">Rating:</span>
-          <span class="big-number">{{ book.rating }}</span><span class="small-number">/10</span>
-        </div>
-        <p class="excerpt">
-          {{ book.content | strip_html | truncatewords:30}}
-        </p>
-      </div> <!-- end info -->
-    </article>
+        <div class="book-info">
+          <a href="{{ book.url | prepend: site.baseurl }}">
+            <h2 class="title">{{ book.title }} — by {{ book.author }}</h2>
+          </a>
+          <div class="rating">
+            <span class="rating-text">Rating:</span>
+            <span class="big-number">{{ book.rating }}</span><span class="small-number">/10</span>
+          </div> <!-- end rating -->
+          <p class="excerpt">
+            {{ book.content | strip_html | truncatewords:30}}
+          </p>
+        </div> <!-- end book-info -->
+      </article>
 
-  {% endfor %}
+    {% endfor %}
+  </div> <!-- end books -->
 </section>

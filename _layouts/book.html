@@ -9,10 +9,31 @@
 {% include head.html %}
 
 <body>
+  <section class="book">
 
-  {{ content }}
+    {% include banner.html %}
 
-  {% include import_js.html %}
+    <a href="/bookshelf" class="back-to">
+      ← Back to bookshelf 📚
+    </a>
+
+    <div class="book-info">
+      <img src="http://images.amazon.com/images/P/{{ page.isbn }}.01.LZZZZZZZ.jpg"
+      alt="cover for {{ page.title }}" class="cover">
+
+      <div class="book-info-content">
+        <h1 class="title">{{ page.title }} — by {{ page.author }}</h2>
+        <div class="rating">
+          <span class="rating-text">Rating:</span>
+          <span class="big-number">{{ page.rating }}</span><span class="small-number">/10</span>
+        </div> <!-- end rating -->
+      </div> <!-- end book info content -->
+    </div> <!-- end book-info -->
+
+    {{ content }}
+
+    {% include import_js.html %}
+  </section>
 </body>
 
 </html>
